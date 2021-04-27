@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_8">
+
+    <ImageView
+        android:id="@+id/imageNotificationSong"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_musical" />
+
+    <TextView
+        android:id="@+id/textNotificationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageNotificationSong"
+        android:layout_toStartOf="@id/imageNotificationCancel"
+        android:ellipsize="end"
+        android:maxLines="1" />
+
+    <ImageButton
+        android:id="@+id/imageNotificationCancel"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_below="@+id/textNotificationTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:src="@drawable/ic_cancel_24" />
+
+    <ImageButton
+        android:id="@+id/imageNotificationPlayPause"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@+id/textNotificationTitle"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_pause_circle_24dp" />
+
+    <ImageButton
+        android:id="@+id/imageNotificationNext"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@+id/textNotificationTitle"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toEndOf="@+id/imageNotificationPlayPause"
+        android:src="@drawable/ic_next_24dp" />
+
+    <ImageButton
+        android:id="@+id/imageNotificationPrevious"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@+id/textNotificationTitle"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:layout_toStartOf="@+id/imageNotificationPlayPause"
+        android:src="@drawable/ic_previous_24dp" />
+
+</RelativeLayout>

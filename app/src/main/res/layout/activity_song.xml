@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSongs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewControl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorGreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H, 3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="@+id/viewControl"
+        app:layout_constraintStart_toStartOf="@+id/viewControl"
+        app:layout_constraintTop_toTopOf="@+id/viewControl" />
+
+    <TextView
+        android:id="@+id/textControlTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintEnd_toEndOf="@+id/viewControl"
+        app:layout_constraintStart_toStartOf="@+id/viewControl"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <ImageView
+        android:id="@+id/buttonNext"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:src="@drawable/ic_next_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewControl"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@id/buttonPlayOrPause"
+        app:layout_constraintTop_toBottomOf="@+id/textControlTitle" />
+
+    <ImageView
+        android:id="@+id/buttonPlayOrPause"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:src="@drawable/ic_pause_circle_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewControl"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/viewControl"
+        app:layout_constraintRight_toLeftOf="@id/buttonNext"
+        app:layout_constraintStart_toStartOf="@+id/viewControl"
+        app:layout_constraintTop_toBottomOf="@+id/textControlTitle" />
+
+    <ImageView
+        android:id="@+id/buttonPrevious"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:src="@drawable/ic_previous_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewControl"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/buttonPlayOrPause"
+        app:layout_constraintTop_toBottomOf="@+id/textControlTitle" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="viewControl, seekBar, textControlTitle, buttonNext, buttonPlayOrPause, buttonPrevious" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
